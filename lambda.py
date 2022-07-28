@@ -51,7 +51,8 @@ print(preco_imposto_2)
 
 
 def calcular_imposto(imposto):
-    return lambda preco: preco * imposto
+    return lambda preco: preco * (1 + imposto)
 
 
-calcular_preco_produto = calcular_imposto(0, 1)
+calcular_preco_produto = calcular_imposto(0.1)
+calcular_preco_servico = calcular_imposto(0.15)
